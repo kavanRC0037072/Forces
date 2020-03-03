@@ -75,7 +75,7 @@ namespace Forces
 
             // Put values for Fx and Fy in labels
             label1.Text = "Fx = " + Fx + "N";
-            label2.Text = "Fx = " + Fx + "N";
+            label2.Text = "Fy = " + Fy + "N";
         }
 
     }
