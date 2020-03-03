@@ -12,6 +12,8 @@ namespace Forces
 {
     public partial class Form1 : Form
     {
+        public double Force { get; private set; }
+
         public Form1()
         {
 
@@ -66,6 +68,14 @@ namespace Forces
         private void Button1_Click(object sender, EventArgs e)
         {
             // Read values from text boxes
+            try
+            {
+               Force = double.Parse(textBox1.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Type a number in the Force box, you doofus!");
+                Force = 0.0;
             double Force = double.Parse(textBox1.Text);
             double Angle = double.Parse(textBox2.Text);
 
@@ -77,7 +87,6 @@ namespace Forces
             label1.Text = "Fx = " + Fx + "N";
             label2.Text = "Fy = " + Fy + "N";
         }
-
+        
     }
 }
- 
