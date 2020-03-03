@@ -69,9 +69,11 @@ namespace Forces
             double Force = double.Parse(textBox1.Text);
             double Angle = double.Parse(textBox2.Text);
 
+            // Calculate Fx and Fy
             double Fx = Force * cos(Angle);
             double Fy = Force * sin(Angle);
 
+            // Put values for Fx and Fy in labels
             label1.Text = "Fx = " + Fx + "N";
             label2.Text = "Fx = " + Fx + "N";
         }
