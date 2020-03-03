@@ -71,6 +71,9 @@ namespace Forces
 
             double Fx = Force * cos(Angle);
             double Fy = Force * sin(Angle);
+
+            label1.Text = "Fx = " + Fx + "N";
+            label2.Text = "Fx = " + Fx + "N";
         }
 
     }
