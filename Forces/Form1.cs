@@ -70,14 +70,17 @@ namespace Forces
             // Read values from text boxes
             try
             {
-               Force = double.Parse(textBox1.Text);
+                Force = double.Parse(textBox1.Text);
             }
             catch
             {
-                MessageBox.Show("Type a number in the Force box, you doofus!");
+                MessageBox.Show("type a number in the force box!");
                 Force = 0.0;
-            double Force = double.Parse(textBox1.Text);
+            }
+
+           
             double Angle = double.Parse(textBox2.Text);
+            Angle = 0.0;
 
             // Calculate Fx and Fy
             double Fx = Force * cos(Angle);
@@ -87,6 +90,10 @@ namespace Forces
             label1.Text = "Fx = " + Fx + "N";
             label2.Text = "Fy = " + Fy + "N";
         }
-        
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
